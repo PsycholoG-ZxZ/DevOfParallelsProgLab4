@@ -14,7 +14,7 @@ public class SingleTestActor extends AbstractActor{
                     engine.eval(m.jsScript);
                     Invocable invocable = (Invocable) engine;
                     StoreMessage msg = new StoreMessage(m.getPackageId(), invocable.invokeFunction(m.functionName, m.tests).toString());
-                    sender().tell( )
+                    sender().tell(msg, self());
                 })
                 .build();
     }
