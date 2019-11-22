@@ -6,5 +6,5 @@ public class StoreMessage {
         this.value = value;
     }
 
-    public String get
+    public String getPackageID
 }
