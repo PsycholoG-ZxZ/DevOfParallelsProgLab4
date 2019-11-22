@@ -9,4 +9,8 @@ public class ClassForTest {
         this.jsScript = jsScript;
         this.tests = tests;
     }
+
+    public String getPackageId() {
+        return packageId;
+    }
 }
