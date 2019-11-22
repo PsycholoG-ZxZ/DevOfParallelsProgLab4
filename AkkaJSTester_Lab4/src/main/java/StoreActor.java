@@ -1,3 +1,5 @@
-public class StoreActor extends Abstract {
+import akka.actor.AbstractActor;
+
+public class StoreActor extends AbstractActor {
 
 }
