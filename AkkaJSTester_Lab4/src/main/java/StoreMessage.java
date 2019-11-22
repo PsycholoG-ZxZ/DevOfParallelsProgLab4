@@ -7,6 +7,6 @@ public class StoreMessage {
     }
 
     public String getPackageID(){
-        
+        return this.packageID;
     }
 }
