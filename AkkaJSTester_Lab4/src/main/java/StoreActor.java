@@ -1,3 +1,3 @@
-public class StoreActor extends Ab {
+public class StoreActor extends Abstract {
 
 }
