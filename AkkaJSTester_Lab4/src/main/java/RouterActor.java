@@ -10,7 +10,8 @@ public class RouterActor extends AbstractActor {
     @Override
     public AbstractActor.Receive createReceive() {
         return receiveBuilder()
-                .match(StoreMessage.class, sm ->StoreActor.tell(sm, self())
+                .match(StoreMessage.class, sm ->StoreActor.tell(sm, self()))
+                
 
 
     }
