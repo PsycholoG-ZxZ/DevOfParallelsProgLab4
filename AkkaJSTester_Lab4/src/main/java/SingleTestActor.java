@@ -13,7 +13,8 @@ public class SingleTestActor extends AbstractActor{
                     ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
                     engine.eval(m.jsScript);
                     Invocable invocable = (Invocable) engine;
-                    sender().tell(new )
+                    String outp = new 
+                    sender().tell( )
                 })
                 .build();
     }
