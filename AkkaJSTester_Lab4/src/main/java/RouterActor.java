@@ -20,7 +20,7 @@ public class RouterActor extends AbstractActor {
 
                     }
 
-                });
+                }).build();
 
 
     }
