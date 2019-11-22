@@ -6,7 +6,7 @@ public class RouterActor extends AbstractActor {
     private ActorRef StoreActor = getContext().actorOf(
             Props.create(StoreActor.class), "Storage"
     );
-    private ActorRef TesterActor =  
+    private ActorRef TesterActor;
     @Override
     public AbstractActor.Receive createReceive() {
 
