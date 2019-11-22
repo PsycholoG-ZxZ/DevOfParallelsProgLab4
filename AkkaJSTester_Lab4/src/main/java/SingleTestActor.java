@@ -1,4 +1,5 @@
 import akka.actor.AbstractActor;
+import akka.japi.pf.ReceiveBuilder;
 
 public class SingleTestActor extends AbstractActor{
     @Override
