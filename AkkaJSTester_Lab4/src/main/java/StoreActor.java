@@ -9,7 +9,8 @@ public class StoreActor extends AbstractActor {
     public Receive createReceive(){
         .match(StoreMess.class, m -> {
             store.put(m.getKey(), m.getValue());
-            System.out.println("receive mess!" +m.toString);
+            System.out.println("receive mess!" +m.toString());
+            
         }
         }
     }
