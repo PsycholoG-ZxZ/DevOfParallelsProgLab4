@@ -9,7 +9,7 @@ public class JsRequestMessage {
     public String functionName;
     public ArrayList<DataTest> tests;
     @JsonCreator
-    public JsRequestMessage(@JsonProperty("packId") String packId, @JsonProperty("jsScript") String jsScript,
+    public JsRequestMessage(@JsonProperty("packageId") String packId, @JsonProperty("jsScript") String jsScript,
                             @JsonProperty("functionName") String functionName, @JsonProperty("tests") Object[] tests){
         this.functionName = functionName;
         this.jsScript = jsScript;
