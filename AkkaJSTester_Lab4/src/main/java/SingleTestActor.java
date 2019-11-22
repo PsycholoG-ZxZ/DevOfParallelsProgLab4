@@ -9,7 +9,7 @@ public class SingleTestActor extends AbstractActor{
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(ClassForTest.class, m -> {
-                    ScriptEngine engine = new ScriptEngineManager().getEngineByName()
+                    ScriptEngine engine = new ScriptEngineManager().getEngineByName("")
                 })
                 .match(GetMessage.class, req -> sender().tell(
                         new StoreMessage(req.getKey(), store.get(req.getKey())), self())
