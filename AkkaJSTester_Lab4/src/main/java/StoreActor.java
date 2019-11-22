@@ -13,7 +13,7 @@ public class StoreActor extends AbstractActor {
                     System.out.println("receive mess!" + m.toString());
                 })
                 .match(GetMessage.class, req -> sender().tell(
-                        new StoreMessage(req.getKey())
+                        new StoreMessage(req.getKey(), store )
                 ))
 
     }
