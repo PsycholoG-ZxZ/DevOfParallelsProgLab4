@@ -7,6 +7,6 @@ public class ClassForTest {
         this.functionName = functionName;
         this.packageId = packageId;
         this.jsScript = jsScript;
-        this.
+        this.tests = tests;
     }
 }
