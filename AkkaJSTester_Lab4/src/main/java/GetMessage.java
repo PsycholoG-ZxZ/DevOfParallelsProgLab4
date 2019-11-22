@@ -4,6 +4,6 @@ public class GetMessage {
         this.packageId = packId;
     }
     public String getPackageId(){
-        return
+        return packageId;
     }
 }
