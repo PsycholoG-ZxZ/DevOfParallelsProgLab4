@@ -8,6 +8,7 @@ public class StoreActor extends AbstractActor {
     @Override
     public Receive createReceive(){
         .match(StoreMess.class, m -> {
+            store
         }
         }
     }
