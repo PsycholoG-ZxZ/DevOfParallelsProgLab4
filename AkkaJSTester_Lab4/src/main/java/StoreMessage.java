@@ -9,4 +9,7 @@ public class StoreMessage {
     public String getPackageID(){
         return packageID;
     }
+    public String getValue(){
+        return value;
+    }
 }

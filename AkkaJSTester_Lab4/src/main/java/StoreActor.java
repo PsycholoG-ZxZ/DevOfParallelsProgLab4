@@ -10,7 +10,7 @@ public class StoreActor extends AbstractActor {
     public Receive createReceive(){
         return ReceiveBuilder.create()
                 .match(StoreMessage.class, m -> {
-                    store.put(m.getKey(), m.getValue());
+                    store.put(m.getPackageID(), m.getValue());
                     System.out.println("receive mess!" + m.toString());
                 })
                 .match(GetMessage.class, req -> sender().tell(
