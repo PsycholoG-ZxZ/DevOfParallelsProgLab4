@@ -12,7 +12,9 @@ public class RouterActor extends AbstractActor {
         return receiveBuilder()
                 .match(StoreMessage.class, sm ->StoreActor.tell(sm, self()))
                 .match(GetMessage.class, gm ->StoreActor.tell(gm, sender()))
-                .match(JsRequestMessage.class, jrm ->{}  )
+                .match(JsRequestMessage.class, jrm ->{
+
+                })
 
 
     }
