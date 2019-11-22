@@ -1,5 +1,5 @@
 public class StoreMessage {
     private String packageID, value;
 
-    public StoreMessage
+    public StoreMessage(Sting )
 }
