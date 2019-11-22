@@ -4,7 +4,7 @@ import akka.actor.ActorSystem;
 import akka.actor.Props;
 
 public class JsTesterApp {
-    public v
+    public static void main 
     ActorSystem system = ActorSystem.create("test");
     ActorRef storeActor = system.actorOf(
             Props.create(StoreActor.class)
