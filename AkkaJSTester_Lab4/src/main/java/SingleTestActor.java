@@ -10,7 +10,8 @@ public class SingleTestActor extends AbstractActor{
         return ReceiveBuilder.create()
                 .match(ClassForTest.class, m -> {
                     ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-                    engine.eval(m.)
+                    engine.eval(m.jsScript);
+                    
                 })
                 .match(GetMessage.class, req -> sender().tell(
                         new StoreMessage(req.getKey(), store.get(req.getKey())), self())
