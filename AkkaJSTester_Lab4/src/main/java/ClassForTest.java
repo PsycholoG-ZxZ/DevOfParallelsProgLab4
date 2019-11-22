@@ -1,4 +1,4 @@
 public class ClassForTest {
     public String packageId;
-    public 
+    public String
 }
