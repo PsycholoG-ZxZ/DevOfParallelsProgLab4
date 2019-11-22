@@ -15,7 +15,7 @@ public class RouterActor extends AbstractActor {
                 .match(StoreMessage.class, sm ->StoreActor.tell(sm, self()))
                 .match(GetMessage.class, gm ->StoreActor.tell(gm, sender()))
                 .match(JsRequestMessage.class, jrm ->{
-                    Iterator<Object[]> iter = jrm.iterator();
+                    Iterator<Object[]> iter = jrm.tests.iterator;
 
                 })
 
