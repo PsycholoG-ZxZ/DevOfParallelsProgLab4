@@ -12,6 +12,6 @@ public class JsRequestMessage {
         this.functionName = functionName;
         this.jsScript = jsScript;
         this.packId = packId;
-        
+        this.tests = tests;
     }
 }
