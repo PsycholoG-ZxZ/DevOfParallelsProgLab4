@@ -3,4 +3,5 @@ public class GetMessage {
     public GetMessage(String packId){
         this.packageId = packId;
     }
+    
 }
