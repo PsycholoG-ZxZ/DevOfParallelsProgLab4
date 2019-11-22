@@ -1,5 +1,6 @@
 public class JsRequestMessage {
     public String packId;
-    public String scriptJs;
-    public String 
+    public String jsScript;
+    public String functionName;
+    
 }
