@@ -4,7 +4,7 @@ import akka.actor.ActorRef;
 public class RouterActor extends AbstractActor {
     @Override
     public AbstractActor.Receive createReceive() {
-        private ActorRef StoreActor = 
+        private ActorRef testStoreActor =
 
 
     }
