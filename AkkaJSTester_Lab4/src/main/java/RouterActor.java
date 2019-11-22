@@ -2,6 +2,8 @@ import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.Props;
 
+import java.util.Iterator;
+
 public class RouterActor extends AbstractActor {
     private ActorRef StoreActor = getContext().actorOf(
             Props.create(StoreActor.class), "Storage"
@@ -13,7 +15,7 @@ public class RouterActor extends AbstractActor {
                 .match(StoreMessage.class, sm ->StoreActor.tell(sm, self()))
                 .match(GetMessage.class, gm ->StoreActor.tell(gm, sender()))
                 .match(JsRequestMessage.class, jrm ->{
-                    Iterator<Object>
+                    Iterator<Object[]>
 
                 })
 
