@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+
 public class ResultsMessages {
     private String value, packageId;
 
-    public ResultsMessages(String packId, String val){
+    public ResultsMessages(String packId, ArrayList<String> val){
         this.packageId = packId;
         this.value = val;
     }
