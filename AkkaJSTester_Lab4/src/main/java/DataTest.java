@@ -1,3 +1,4 @@
 public class DataTest {
-    private String
+    private String Name;
+    
 }
