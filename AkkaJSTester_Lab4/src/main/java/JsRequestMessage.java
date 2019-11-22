@@ -7,5 +7,5 @@ public class JsRequestMessage {
     public String functionName;
     public Object[] tests;
     @JsonCreator
-    public JsRequestMessage(@JsonProperty("packId") String)
+    public JsRequestMessage(@JsonProperty("packId") String packId. )
 }
