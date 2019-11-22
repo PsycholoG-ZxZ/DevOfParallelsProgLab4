@@ -1,3 +1,3 @@
 public class ClassForTest {
-    public String 
+    public String packageId
 }
