@@ -1,3 +1,4 @@
 public class GetMessage {
-    public GetMessage(String )
+    private packageId = 
+    public GetMessage(String packId);
 }
