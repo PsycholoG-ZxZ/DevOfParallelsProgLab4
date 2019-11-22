@@ -4,6 +4,9 @@ public class ClassForTest {
     public Object[] tests;
 
     public ClassForTest(String packageId, String functionName, String jsScript, Object[] tests){
+        this.functionName = functionName;
+        this.packageId = packageId;
+        this.jsScript = jsScript;
         this.
     }
 }
