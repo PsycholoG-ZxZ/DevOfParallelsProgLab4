@@ -8,6 +8,8 @@ public class DataTest {
     public Object[] params;
 
     DataTest(@JsonProperty("testName") String testName, @JsonProperty("expectedResult") String exResult, @JsonProperty("params") String params){
-        
+        this.exResult = exResult;
+        this.params = params;
+        this.testName = testName;
     }
 }
