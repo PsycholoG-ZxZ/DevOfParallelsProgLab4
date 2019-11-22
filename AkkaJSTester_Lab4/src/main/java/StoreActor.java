@@ -8,7 +8,7 @@ public class StoreActor extends AbstractActor {
     @Override
     public Receive createReceive(){
         .match(StoreMess.class, m -> {
-            store.put(m.getKey())
+            store.put(m.getKey(), m.)
         }
         }
     }
