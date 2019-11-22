@@ -4,6 +4,6 @@ public class ClassForTest {
     public Object[] tests;
 
     public ClassForTest(String packageId, String functionName, String jsScript, Object[] tests){
-        
+        this.
     }
 }
