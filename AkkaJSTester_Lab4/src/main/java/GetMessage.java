@@ -1,3 +1,3 @@
 public class GetMessage {
-    public GetMessage
+    public GetMessage(String )
 }
