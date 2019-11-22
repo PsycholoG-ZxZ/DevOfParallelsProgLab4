@@ -8,5 +8,7 @@ public class JsRequestMessage {
     public Object[] tests;
     @JsonCreator
     public JsRequestMessage(@JsonProperty("packId") String packId, @JsonProperty("jsScript") String jsScript,
-                            @JsonProperty("functionName") String functionName, @JsonProperty("tests") Object[] tests)
+                            @JsonProperty("functionName") String functionName, @JsonProperty("tests") Object[] tests){
+        
+    }
 }
