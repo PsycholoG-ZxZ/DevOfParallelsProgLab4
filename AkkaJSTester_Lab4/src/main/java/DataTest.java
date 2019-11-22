@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DataTest {
     private String testName;
-    private String result;
-    public Object[] values;
+    private String exResult;
+    public Object[] params;
 
-    DataTest(@JsonProperty("testName") String testName, @JsonProperty("expectedResult") String result, @JsonProperty(""))
+    DataTest(@JsonProperty("testName") String testName, @JsonProperty("expectedResult") String exResult, @JsonProperty("params"))
 }
