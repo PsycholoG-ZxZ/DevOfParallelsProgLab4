@@ -1,3 +1,3 @@
 public class JsRequestMessage {
-    public 
+    public Sting
 }
