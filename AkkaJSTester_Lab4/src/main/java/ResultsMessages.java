@@ -1,3 +1,3 @@
 public class ResultsMessages {
-    private String 
+    private String value, 
 }
