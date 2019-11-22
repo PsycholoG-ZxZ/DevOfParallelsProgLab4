@@ -1,4 +1,6 @@
 public class GetMessage {
-    private packageId = 
-    public GetMessage(String packId);
+    private String packageId;
+    public GetMessage(String packId){
+        
+    }
 }
