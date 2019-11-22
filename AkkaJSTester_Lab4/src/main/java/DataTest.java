@@ -1,3 +1,3 @@
 public class DataTest {
-    private 
+    private String
 }
