@@ -1,3 +1,5 @@
-public class SingleTestActor {
-    
+import akka.actor.AbstractActor;
+
+public class SingleTestActor extends AbstractActor {
+
 }
