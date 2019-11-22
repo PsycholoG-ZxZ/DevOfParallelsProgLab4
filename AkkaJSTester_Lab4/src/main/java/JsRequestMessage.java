@@ -6,5 +6,5 @@ public class JsRequestMessage {
     public String functionName;
     public Object[] tests;
     @JsonCreator
-    public 
+    public Post
 }
