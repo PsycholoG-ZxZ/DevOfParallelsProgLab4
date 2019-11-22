@@ -3,5 +3,5 @@ public class ClassForTest {
     public String functionName, jsScrpt;
     public Object[] tests;
 
-    
+    public ClassForTest
 }
