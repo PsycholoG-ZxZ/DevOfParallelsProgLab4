@@ -10,6 +10,6 @@ public class JsRequestMessage {
     public JsRequestMessage(@JsonProperty("packId") String packId, @JsonProperty("jsScript") String jsScript,
                             @JsonProperty("functionName") String functionName, @JsonProperty("tests") Object[] tests){
         this.functionName = functionName;
-        this.
+        this.jsScript = 
     }
 }
