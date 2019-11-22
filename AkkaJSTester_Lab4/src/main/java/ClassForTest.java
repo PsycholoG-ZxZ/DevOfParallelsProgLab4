@@ -1,7 +1,7 @@
 public class ClassForTest {
     public String packageId;
-    public String functionName, jsScrpt;
+    public String functionName, jsScript;
     public Object[] tests;
 
-    public ClassForTest()
+    public ClassForTest(String packageId, String functionName, jsScript)
 }
