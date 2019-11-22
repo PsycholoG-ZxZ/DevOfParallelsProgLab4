@@ -8,9 +8,10 @@ public class StoreActor extends AbstractActor {
     @Override
     public Receive createReceive(){
         return ReceiveBuider.create()
-        .match(StoreMess.class, m -> {
-            store.put(m.getKey(), m.getValue());
-            System.out.println("receive mess!" +m.toString());
-        })
+                .match(StoreMess.class, m -> {
+                    store.put(m.getKey(), m.getValue());
+                    System.out.println("receive mess!" + m.toString());
+                }
+                
     }
 }
