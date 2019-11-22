@@ -6,5 +6,5 @@ public class DataTest {
     private String result;
     public Object[] values;
 
-    DataTest(@JsonProperty("testName") String testName)
+    DataTest(@JsonProperty("testName") String testName), @JsonProperty("result")
 }
