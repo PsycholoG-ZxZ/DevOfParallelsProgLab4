@@ -1,3 +1,3 @@
 public class StoreMessage {
-    private String 
+    private String packageId
 }
