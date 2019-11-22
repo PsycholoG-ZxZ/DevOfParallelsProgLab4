@@ -1,3 +1,4 @@
 public class JsRequestMessage {
-    public String 
+    public String packId;
+    public 
 }
