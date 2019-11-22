@@ -1,4 +1,5 @@
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class JsRequestMessage {
     public String packId;
@@ -6,5 +7,5 @@ public class JsRequestMessage {
     public String functionName;
     public Object[] tests;
     @JsonCreator
-    public JsRequestMessage(@JsonCreator)
+    public JsRequestMessage(@JsonProperty(""))
 }
