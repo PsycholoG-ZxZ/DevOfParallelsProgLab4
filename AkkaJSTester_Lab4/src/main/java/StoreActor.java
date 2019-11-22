@@ -1,5 +1,5 @@
 import akka.actor.AbstractActor;
 
 public class StoreActor extends AbstractActor {
-    private Map
+    private Map<String, String>
 }
