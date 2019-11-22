@@ -8,8 +8,7 @@ public class SingleTestActor extends AbstractActor{
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(ClassForTest.class, m -> {
-                    ScriptEngine engine = new ScriptEngine engine = new;
-
+                    ScriptEngine engine = new 
                 })
                 .match(GetMessage.class, req -> sender().tell(
                         new StoreMessage(req.getKey(), store.get(req.getKey())), self())
