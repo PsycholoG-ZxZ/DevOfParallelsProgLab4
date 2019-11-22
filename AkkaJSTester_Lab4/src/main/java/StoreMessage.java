@@ -1,13 +1,13 @@
 public class StoreMessage {
-    private String packageID, value;
+    private String packageId, value;
 
     public StoreMessage(String packID, String value){
-        this.packageID = packID;
+        this.packageId = packID;
         this.value = value;
     }
 
-    public String getPackageID(){
-        return packageID;
+    public String getPackageId(){
+        return packageId;
     }
     public String getValue(){
         return value;
