@@ -1,3 +1,3 @@
-public class StoreActor {
-    
+public class StoreActor  {
+
 }
