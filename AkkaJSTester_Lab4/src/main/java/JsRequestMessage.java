@@ -3,5 +3,5 @@ public class JsRequestMessage {
     public String jsScript;
     public String functionName;
     public Object[] tests;
-    
+    @Json
 }
