@@ -11,7 +11,7 @@ public class RouterActor extends AbstractActor {
     public AbstractActor.Receive createReceive() {
         return receiveBuilder()
                 .match(StoreMessage.class), sm ->StoreActor.tell(
-                        sm
+                        sm, self
         )
 
 
