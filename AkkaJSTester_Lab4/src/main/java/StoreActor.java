@@ -4,5 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StoreActor extends AbstractActor {
-    private Map<String, String> store = new HashMap<>()
+    private Map<String, String> store = new HashMap<>();
+    
 }
