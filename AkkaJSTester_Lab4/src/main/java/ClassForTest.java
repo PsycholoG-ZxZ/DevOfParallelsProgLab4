@@ -3,5 +3,5 @@ public class ClassForTest {
     public String functionName, jsScript;
     public Object[] tests;
 
-    public ClassForTest(String packageId, String functionName, String jsScript, )
+    public ClassForTest(String packageId, String functionName, String jsScript, Object[])
 }
