@@ -3,5 +3,7 @@ public class GetMessage {
     public GetMessage(String packId){
         this.packageId = packId;
     }
-    public String getPackageId
+    public String getPackageId(){
+        
+    }
 }
