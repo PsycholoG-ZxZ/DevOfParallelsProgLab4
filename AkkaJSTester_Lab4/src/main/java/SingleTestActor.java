@@ -13,7 +13,8 @@ public class SingleTestActor extends AbstractActor{
                     ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
                     engine.eval(m.jsScript);
                     Invocable invocable = (Invocable) engine;
-                    StoreMessage msg = new StoreMessage(m.getPackageId(), invocable.invokeFunction(m.functionName, m.tests)),self();
+                    StoreMessage msg = new StoreMessage(m.getPackageId(), invocable.invokeFunction(m.functionName, m.tests).toString());
+                    
                     sender().tell( )
                 })
                 .build();
