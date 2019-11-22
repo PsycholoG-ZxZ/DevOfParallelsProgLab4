@@ -9,7 +9,8 @@ public class RouterActor extends AbstractActor {
     private ActorRef TesterActor;
     @Override
     public AbstractActor.Receive createReceive() {
-
+        return receiveBuilder()
+                .match()
 
 
     }
