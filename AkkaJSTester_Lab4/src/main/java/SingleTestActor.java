@@ -12,7 +12,7 @@ public class SingleTestActor extends AbstractActor{
                 .match(ClassForTest.class, m -> {
                     ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
                     engine.eval(m.jsScript);
-                    Invocable invocable
+                    Invocable invocable = (Invocable)
                 })
                 .match(GetMessage.class, req -> sender().tell(
                         new StoreMessage(req.getKey(), store.get(req.getKey())), self())
