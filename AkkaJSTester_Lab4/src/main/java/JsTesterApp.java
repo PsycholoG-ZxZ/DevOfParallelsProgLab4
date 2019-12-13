@@ -13,8 +13,7 @@ import java.io.IOException;
 import java.util.concurrent.Future;
 import java.util.regex.Pattern;
 
-import static akka.http.javadsl.server.Directives.get;
-import static akka.http.javadsl.server.Directives.route;
+import static akka.http.javadsl.server.Directives.*;
 
 public class JsTesterApp {
     public static void main(String[] args ) throws IOException {
@@ -35,7 +34,7 @@ public class JsTesterApp {
                 get(
                         () -> parameter("packageId", packId ->{
                             Future<Object> futureRes = Pattern.ask(
-                                    RouterActor, 
+                                    RouterActor, new GetMessage(packId),
                             )
                         })
                 )
