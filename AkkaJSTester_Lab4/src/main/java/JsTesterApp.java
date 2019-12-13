@@ -38,12 +38,17 @@ public class JsTesterApp {
                 get(
                         () -> parameter("packageId", packId ->{
                             Future<Object> futureRes = Patterns.ask(
-                                    
-                                    , new GetMessage(packId),5000);
+                                    RouterActor,
+                                    new GetMessage(packId),5000);
                             return completeOKWithFuture(futureRes, Jackson.marshaller());
-                            )
+                        })
+                ),
+                post(
+                        () -> entity(Jackson.unmarshaller(JsRequestMessage.class), x ->{
+                            RouterActor.tell(x, ActorRef.noSender());
+                            return complete("Test started!");
                         })
                 )
-        )
+        );
     }
 }
