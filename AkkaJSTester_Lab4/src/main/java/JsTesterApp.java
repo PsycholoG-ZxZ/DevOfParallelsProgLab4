@@ -18,6 +18,6 @@ public class JsTesterApp {
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         JsTesterApp app = new JsTesterApp();
-        JsTesterApp inst = new JsTesterApp();
+        
     }
 }
