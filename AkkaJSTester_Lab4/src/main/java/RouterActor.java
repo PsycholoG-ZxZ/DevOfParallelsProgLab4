@@ -25,4 +25,7 @@ public class RouterActor extends AbstractActor {
         Stream.of(req.getTests()).map((t -> new ClassForTest(req.getPackId(), req.getFunctionName(), req.getJsScript(), t))).forEach(tt ->
                 this.RouterAct.tell(tt, this.StoreActor));
     }
+    private void receiveTestReq(GetMessage gM){
+        this.StoreActor.tell(gM, getSender());
+    }
 }
