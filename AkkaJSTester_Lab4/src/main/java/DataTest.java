@@ -10,7 +10,7 @@ public class DataTest {
     Boolean status;
 
     DataTest(@JsonProperty("testName") String testName, @JsonProperty("expectedResult") String exResult,
-             @JsonProperty("params") Object[] params, @JsonProperty("status") Boolean status){
+             @JsonProperty("params") Object[] params){
         this.exResult = exResult;
         this.params = params;
         this.testName = testName;
