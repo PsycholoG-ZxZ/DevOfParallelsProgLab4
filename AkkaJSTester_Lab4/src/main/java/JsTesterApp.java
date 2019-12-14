@@ -53,6 +53,7 @@ public class JsTesterApp {
                 post(
                         () -> entity(Jackson.unmarshaller(JsRequestMessage.class), x ->{
                             routerActor.tell(x, ActorRef.noSender());
+                            System.out.println("Post done");
                             return complete("Test started!");
                         })
                 )
