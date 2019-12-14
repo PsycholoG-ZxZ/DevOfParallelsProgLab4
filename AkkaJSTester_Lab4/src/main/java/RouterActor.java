@@ -20,6 +20,7 @@ public class RouterActor extends AbstractActor {
 
                 .match(GetMessage.class, sm ->StoreActor.tell(sm, self()))
                 .match(JsRequestMessage.class, this:: streamMessageReq
+
                 ).build();
     }
 
