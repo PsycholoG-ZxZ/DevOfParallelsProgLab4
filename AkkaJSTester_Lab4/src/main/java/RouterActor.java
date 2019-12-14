@@ -17,7 +17,8 @@ public class RouterActor extends AbstractActor {
     @Override
     public AbstractActor.Receive createReceive() {
         return receiveBuilder()
-                .match(ClassForTest.class, sm ->StoreActor.tell(sm, self()))
+
+                .match(GetMessage.class, sm ->StoreActor.tell(sm, self()))
                 .match(JsRequestMessage.class, this:: streamMessageReq
                 ).build();
     }
