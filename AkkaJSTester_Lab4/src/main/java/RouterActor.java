@@ -13,19 +13,21 @@ public class RouterActor extends AbstractActor {
     private ActorRef RouterAct = getContext().actorOf(
             new RoundRobinPool(3).props(Props.create(SingleTestActor.class))
     , "Router");
+
     @Override
     public AbstractActor.Receive createReceive() {
         return receiveBuilder()
-                .match(StoreMessage.class, sm ->StoreActor.tell(sm, self()))
+                .match(ClassForTest.class, sm ->StoreActor.tell(sm, self()))
                 .match(JsRequestMessage.class, this:: streamMessageReq
                 ).build();
     }
 
+
+
     private void streamMessageReq(JsRequestMessage req){
-        Stream.of(req.getTests()).map((t -> new ClassForTest(req.getPackId(), req.getFunctionName(), req.getJsScript(), t))).forEach(tt ->
-                this.RouterAct.tell(tt, this.StoreActor));
-    }
-    private void receiveTestReq(GetMessage gM){
-        this.StoreActor.tell(gM, getSender());
+        for (int i = 0 ; i < req.getTests().size(); i++){
+            ActorRef singeTestActor = getContext().actorOf(Props.create(SingleTestActor.class), "TestActor");
+            singeTestActor.tell(new JsRequestMessage(req.getPackId(),req.getJsScript(),req.getFunctionName(),req.getTests()),sender());
+        }
     }
 }

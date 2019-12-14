@@ -1,4 +1,5 @@
 import akka.actor.AbstractActor;
+import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
 
 import javax.script.Invocable;
@@ -15,9 +16,7 @@ public class SingleTestActor extends AbstractActor{
                     Invocable invocable = (Invocable) engine;
                     StoreMessage msg = new StoreMessage(m.getPackageId(), invocable.invokeFunction(m.functionName, m.tests).toString());
                     m.setStatus(m.getTests().getExResult() == msg.getValue());
-                    sender().tell(m, );
-
-
+                    sender().tell(m, ActorRef.noSender());
                 })
                 .build();
     }
