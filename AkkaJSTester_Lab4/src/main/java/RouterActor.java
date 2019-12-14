@@ -28,7 +28,9 @@ public class RouterActor extends AbstractActor {
         for (int i = 0 ; i < req.getTests().size(); i++){
             System.out.println("test" + i);
             ActorRef singeTestActor = getContext().actorOf(Props.create(SingleTestActor.class), "TestActor"+i);
-            singeTestActor.tell(new JsRequestMessage(req.getPackId(),req.getJsScript(),req.getFunctionName(),req.getTests()),sender());
+            //singeTestActor.tell(new JsRequestMessage(req.getPackId(),req.getJsScript(),req.getFunctionName(),req.getTests()),sender());
+            singeTestActor.tell(new ClassForTest(req.getPackId(),req.getFunctionName(),req.getJsScript(), req.getTests().get()),sender());
+
         }
     }
 }
