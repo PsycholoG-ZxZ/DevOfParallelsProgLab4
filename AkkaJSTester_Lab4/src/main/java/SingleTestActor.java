@@ -17,6 +17,7 @@ public class SingleTestActor extends AbstractActor{
                     StoreMessage msg = new StoreMessage(m.getPackageId(), invocable.invokeFunction(m.functionName, m.tests).toString());
                     m.setStatus(m.getTests().getExResult() == msg.getValue());
                     sender().tell(m, ActorRef.noSender());
+                    System.out.println("Сказал!");
                 })
                 .build();
     }
