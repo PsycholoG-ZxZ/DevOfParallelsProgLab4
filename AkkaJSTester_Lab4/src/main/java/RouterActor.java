@@ -26,7 +26,7 @@ public class RouterActor extends AbstractActor {
 
     private void streamMessageReq(JsRequestMessage req){
         for (int i = 0 ; i < req.getTests().size(); i++){
-            ActorRef singeTestActor = getContext().actorOf(Props.create(SingleTestActor.class), "TestActor"+req.functionName);
+            ActorRef singeTestActor = getContext().actorOf(Props.create(SingleTestActor.class), "TestActor"+i);
             singeTestActor.tell(new JsRequestMessage(req.getPackId(),req.getJsScript(),req.getFunctionName(),req.getTests()),sender());
         }
     }
