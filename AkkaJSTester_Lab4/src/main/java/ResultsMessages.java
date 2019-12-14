@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class ResultsMessages {
     private String packageId;
-    private ArrayList<String> value;
+    private ArrayList<DataTest> value;
 
-    public ResultsMessages(String packId, ArrayList<String> val){
+    public ResultsMessages(String packId, ArrayList<DataTest> val){
         this.packageId = packId;
         this.value = val;
     }
 
-    public ArrayList<String> getValue(){
+    public ArrayList<DataTest> getValue(){
         return value;
     }
 

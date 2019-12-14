@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 public class ClassForTest {
     public String packageId;
     public String functionName, jsScript;
@@ -21,5 +23,8 @@ public class ClassForTest {
     }
     public DataTest getTests() {
         return tests;
+    }
+    void setStatus(Boolean stat){
+        this.tests.status = stat;
     }
 }

@@ -11,10 +11,13 @@ public class SingleTestActor extends AbstractActor{
         return ReceiveBuilder.create()
                 .match(ClassForTest.class, m -> {
                     ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
-                    engine.eval(m.jsScript);
+                    engine.eval(m.getJsScript());
                     Invocable invocable = (Invocable) engine;
                     StoreMessage msg = new StoreMessage(m.getPackageId(), invocable.invokeFunction(m.functionName, m.tests).toString());
-                    sender().tell(msg, self());
+                    m.setStatus(m.getTests().getExResult() == msg.getValue());
+                    sender().tell(m, );
+
+
                 })
                 .build();
     }

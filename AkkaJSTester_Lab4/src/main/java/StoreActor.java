@@ -6,16 +6,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StoreActor extends AbstractActor {
-    private Map<String, ArrayList<String>> store = new HashMap<>();
+    private Map<String, JsRequestMessage> store = new HashMap<>();
     @Override
     public Receive createReceive(){
         return ReceiveBuilder.create()
-                .match(StoreMessage.class, m -> {
-                    store.put(m.getPackageId(), store.get(m.getPackageId()));
-                  //  System.out.println("receive mess!" + m.toString());
+                .match(ClassForTest.class, m -> {
+                    if (this.store.containsKey(m.getPackageId())) {
+                        this.store.get(m.getPackageId()).tests.add(m.getTests());
+                    }else{
+                        JsRequestMessage jsReqM = new JsRequestMessage(m);
+                        this.store.put(m.getPackageId(), jsReqM);
+                    }
                 })
                 .match(GetMessage.class, req -> sender().tell(
-                        new ResultsMessages(req.getPackageId(), store.get(req.getPackageId())),self())
+                        new ResultsMessages(req.getPackageId(), this.store.get(req.getPackageId()).getTests()),self())
                 ).build();
     }
 }

@@ -7,11 +7,14 @@ public class DataTest {
     private String exResult;
     public Object[] params;
 
+    Boolean status;
+
     DataTest(@JsonProperty("testName") String testName, @JsonProperty("expectedResult") String exResult,
-             @JsonProperty("params") Object[] params){
+             @JsonProperty("params") Object[] params, @JsonProperty("status") Boolean status){
         this.exResult = exResult;
         this.params = params;
         this.testName = testName;
+        this.status = null;
     }
 
     @JsonProperty("expectedResult")
