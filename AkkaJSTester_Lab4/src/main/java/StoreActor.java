@@ -21,6 +21,10 @@ public class StoreActor extends AbstractActor {
                 .match(GetMessage.class, req -> sender().tell(
                         new ResultsMessages(req.getPackageId(), this.store.get(req.getPackageId()).getTests(),
                                 this.store.get(req.getPackageId()).tests.get(Integer.parseInt(req.getPackageId())).status),self())
+
+                )
+                .match(GetMessage.class, req -> sender().tell(
+                        new FinalResultMessage( this.store.get(req.getPackageId()).tests.get(Integer.parseInt(req.getPackageId())).status),self())
                 ).build();
     }
 }
